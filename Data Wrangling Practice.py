@@ -73,7 +73,7 @@ df['city-L/100km'] = 235/df["city-mpg"]
 df["highway-mpg"] = 235/df["highway-mpg"]
 df.rename(columns={'"highway-mpg"':'highway-L/100km'}, inplace=True)
 
-#Data Normalization
+#Data Normalization - scale the columns "length", "width" and "height"
 #Target: normalize those variables so their value ranges from 0 to 1 - Approach: replace the original value by (original value)/(maximum value)
 
 df['length'] = df['length']/df['length'].max()
